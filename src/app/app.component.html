@@ -1,0 +1,36 @@
+
+<div class="tudo">
+
+
+  <div class="container">
+
+    <span>R</span>
+    <span>H</span>
+    <span>A</span>
+    <span>Y</span>
+    <span>Z</span>
+    <span>A</span>
+
+    <div class="sai">
+      <input type="checkbox" class="checkbox" id="chk" />
+      <label class="label" for="chk" (click)="toggle()">
+        <fa-icon [icon]="faMoon" style="display: flex; align-items: end; color: #f1c40f">  </fa-icon>
+        <fa-icon [icon]="faSun" style="display: flex; align-items: end; color: #f39c12; margin-left:5px ">  </fa-icon>
+
+        <div class="ball">
+
+        </div>
+      </label>
+
+    </div>
+  </div>
+  <div>
+    <app-menu></app-menu>
+  </div>
+
+  <router-outlet></router-outlet>
+
+  <div>
+    <app-redes-sociais></app-redes-sociais>
+  </div>
+</div>
