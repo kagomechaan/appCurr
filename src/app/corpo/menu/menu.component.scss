@@ -1,8 +1,6 @@
 body {
   width: 100%;
   margin: 0;
-  font-size: 40px;
-  letter-spacing: 2px;
   text-transform: uppercase;
   background: -webkit-linear-gradient(to right, #240b36, #c31432);
   background: linear-gradient(to right, #240b36,#c31432 );
@@ -10,66 +8,187 @@ body {
 
 }
 
-.menuzinho {
-  display: table;
-  height: 10vh;
-  width: 100%;
-  
-}
-nav {
-    display: table-cell;
-    vertical-align:middle;
-    text-align:center;
-}
 
-ul{
-    list-style:none;
-    margin:0;
-    padding:0;
-}
-li{
-    display:inline-block;
+  .top-nav ul {
+    list-style: none; /* Remove os bullets */
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-nav {
+    background-color: #612674;
+    text-align: center;
+  }
+
+  .menuzinho {
+    display: table;  
+    width: 100%;
+    max-width: 1124px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  nav {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
     padding: 0 15px;
-}
+  }
+
 a {
   position: relative;
   display: block;
   cursor: pointer;
-  padding: 8px 0;
   text-decoration: none;
-  color: #111010;
-  font-size:2em;
-  
-    
-}
-a:hover {
   color: #4541b4;
-  text-decoration:none;
+  font-size: 2em;
 }
-a:before, a:after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -2px;
-  background: #4541b4;
+
+  a:hover {
+    color: #4541b4;
+    text-decoration: none;
+  }
+
+  a:before, a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    background: #4541b4;
+  }
+
+  a:before {
+    left: 0;
+  }
+
+  a:after {
+    right: 0;
+    background: #4541b4;
+    transition: 0.8s cubic-bezier(0.22, 0.61, 0.36,1);
+  }
+
+  a:hover:before {
+    width: 100%;
+    background: #4541b4;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36,1);
+  }
+
+  a:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+  }
+.top-header clearfix {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
-a:before{
-    left:0;
+.top-header {
+  text-align: center; /* <img> é, por padrão, um elemento de linha. Por isso conseguimos alinhá-lo com um text-align. */
 }
-a:after {
-  right: 0;
-  background: #4541b4;
-  transition:0.8s cubic-bezier(0.22, 0.61, 0.36,1);
+.top-nav {
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
-a:hover:before {
-  width:100%;
-  background: #4541b4;
-  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36,1);
+
+.top-nav ul {
+  list-style: none; /* Remove os bullets */
+  margin: 0;
+  /* padding: 1em 0; */
+  padding: 0;
+  align-items: center;
+  justify-content: center;
 }
-a:hover:after{
-    background:transparent;
+
+.top-nav a {
+  color: #4541b4;
+  text-decoration: none; /* Remove o sublinhado */
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+ul.top-nav {
+  background-color: transparent;
+}
+  // -----------------------------------------------------------------------------------------------
+
+@media screen and (min-width: 48.75em) {
+  .top-nav {
+    background-color: transparent;
+    float: right;
     width:100%;
-    transition:0s;
+
+  }
+  .top-header {
+    text-align: center; /* <img> é, por padrão, um elemento de linha. Por isso conseguimos alinhá-lo com um text-align. */
+  }
+  .top-header clearfix{
+      width:100%;
+      align-items:center;
+      justify-content:center;
+  }
+  .top-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-nav li {
+    display: inline-block;
+  }
+
+  .top-nav a {
+    color: #713a84;
+    justify-content: center;
+    align-items: center;
+  }
+  ul.top-nav{
+      background-color:transparent;
+  }
+}
+@media screen and (min-width: 62.5em) { /* 1000px / 16px = 62.5em */
+  .top-content {
+    /*
+        background-color: #521a66;
+        background-image: url(../images/bg_topo_1198x670.jpg);
+        */
+ 
+    background-position: center bottom;
+  }
+  .top-nav{
+      width:100%;
+      justify-content:center;
+      align-items:center;
+  }
+  ul.top-nav {
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 74em) { /* 1024px / 16px = 64em */
+  .top-content {
+    padding: 19em 18em 10em;
+    background-position: center top;
+  }
+  .top-nav {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  ul.top-nav {
+    background-color: transparent;
+  }
 
 }

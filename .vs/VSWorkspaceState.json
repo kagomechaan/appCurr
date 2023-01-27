@@ -5,10 +5,10 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\corpo",
-    "\\src\\app\\corpo\\redes-sociais",
+    "\\src\\app\\corpo\\certificados",
+    "\\src\\app\\corpo\\fale-comigo",
     "\\src\\assets",
     "\\src\\assets\\certificados"
   ],
-  "SelectedNode": "\\src\\assets\\certificados\\sebraeNegociacao .jpg",
   "PreviewInSolutionExplorer": false
 }
