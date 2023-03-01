@@ -8,9 +8,12 @@ import { FaleComigoComponent } from './corpo/fale-comigo/fale-comigo.component';
 
 export const ROUTES: Routes = [
   { path: 'home', component: CorpoComponent },
+  { path: '', component: CorpoComponent },
+  { path: ' ', component: CorpoComponent },
   { path: 'certificados', component: CertificadosComponent },
   { path: 'projetos', component: ProjetosComponent },
   { path: 'experiencia', component: XpComponent },
   { path: 'falecomigo', component: FaleComigoComponent },
+  { path: 'falecomigo/:requestValue', component: FaleComigoComponent }
 
   ]

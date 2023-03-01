@@ -5,10 +5,9 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\corpo",
-    "\\src\\app\\corpo\\certificados",
     "\\src\\app\\corpo\\fale-comigo",
-    "\\src\\assets",
-    "\\src\\assets\\certificados"
+    "\\src\\assets"
   ],
+  "SelectedNode": "\\src\\app\\corpo\\corpo.component.html",
   "PreviewInSolutionExplorer": false
 }
