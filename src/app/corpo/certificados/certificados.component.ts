@@ -1,10 +1,12 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-
+import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
 // import Swiper core and required modules
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
+import SwiperCore, {  Pagination, EffectCoverflow } from 'swiper';
 // install Swiper modules
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
+SwiperCore.use([EffectCoverflow, Pagination]);
+
+
+
+
 
 @Component({
   selector: 'app-certificados',

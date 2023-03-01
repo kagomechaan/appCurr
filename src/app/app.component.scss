@@ -3,15 +3,18 @@
 
 .tudo {
   transition: background 0.2s linear;
-  gap: 30px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
-.sai{
-    position:relative;
-    margin-left:100px;
+.sai {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 .checkbox{
+    position:relative;
     opacity:0;
-    position:absolute;
 
 }
 .checkbox:checked + .label .ball{
@@ -25,13 +28,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px;
   position: relative;
   transform: scale(1.5);
-  margin-top: 20px;
+  margin-top: 1em;
   height:26px;
   width:50px;
-  margin-bottom:20px;
+  margin-bottom:1em;
 }
 .label .ball{
     background-color:#fff;
@@ -46,46 +49,63 @@
    
 }
 
-
-.container {
+.container .nome {
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: row;
-  position: center;
+  position: relative;
   display: flex;
-  margin-bottom:20px;
-  letter-spacing:0.2em;
-  
+  margin-right: 1em;
+  letter-spacing: 0.2em;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  position: relative;
+  display: flex;
+  margin-bottom: 2%;
+  letter-spacing: 0.2em;
 }
 .container > span {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 body {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
-  
 }
 * {
-
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  position: relative;
   justify-content: center;
   align-items: center;
 }
 
 span {
-  margin-right:100px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 3em;
   position: relative;
-  top: 35%;
+  top: 25%;
   background: linear-gradient(90deg, #ff0000,#ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000 );
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,'Bodoni MT';
   background-size: 400%;
-  font-size: 70px;
-  letter-spacing: 50px;
+  font-size: 5em;
+  letter-spacing: 1em;
   font-weight: 600;
-  word-spacing: 5px;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   animation: animate 10s linear infinite;
@@ -97,4 +117,58 @@ span {
   100% {
     background-position:400%;
   }
+}
+
+@media(max-width:991px) {
+  .checkbox {
+
+    display: inline-block;
+  }
+
+  .sai {
+
+    position: relative;
+    display: inline-block;
+  }
+
+  span.z {
+    font-size: 0;
+  }
+  span {
+    font-size: 1.5em;
+  }
+
+  div.nome {
+    font-size: 1.5em;
+  }
+  label.label {
+    position: relative;
+  }
+}
+// normal
+@media  (min-width: 74em) {
+  .checkbox {
+    display: inline-block;
+  }
+  span.z {
+    font-size: 0;
+  }
+  .sai {
+
+    position: relative;
+    display: inline-block;
+  }
+  span {
+
+    font-size: 2em;
+  }
+  div.nome {
+    font-size: 2em;
+
+  }
+  span.z {
+
+    font-size: 2em;
+  }
+
 }
