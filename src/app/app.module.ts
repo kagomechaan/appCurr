@@ -4,6 +4,12 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SwiperModule } from 'swiper/angular';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 // --------------------------- COMPONENTES ---------------------------------------------------
 
@@ -16,6 +22,8 @@ import { CertificadosComponent } from './corpo/certificados/certificados.compone
 import { ProjetosComponent } from './corpo/projetos/projetos.component';
 import { XpComponent } from './corpo/xp/xp.component';
 import { FaleComigoComponent } from './corpo/fale-comigo/fale-comigo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopupFaleComigoComponent } from './services/popup-fale-comigo/popup-fale-comigo.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +34,17 @@ import { FaleComigoComponent } from './corpo/fale-comigo/fale-comigo.component';
     CertificadosComponent,
     ProjetosComponent,
     XpComponent,
-    FaleComigoComponent
+    FaleComigoComponent,
+    PopupFaleComigoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     RouterModule.forRoot(ROUTES),  // mapeamento global , o forchild é um mapeamento interno
-    SwiperModule
+    SwiperModule, BrowserAnimationsModule,
+    MatDialogModule, MatAutocompleteModule, MatFormFieldModule, MatInputModule,
+    FormsModule, ReactiveFormsModule, MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

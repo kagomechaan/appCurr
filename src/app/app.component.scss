@@ -6,6 +6,7 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
+
 }
 .sai {
   margin-left: auto;
@@ -48,7 +49,9 @@
     transition: transform 0.2s linear;
    
 }
-
+.tudo .container .sai{
+    margin-left:0;
+}
 .container .nome {
   margin-left: auto;
   margin-right: auto;
@@ -172,3 +175,4 @@ span {
   }
 
 }
+
