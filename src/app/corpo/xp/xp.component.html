@@ -1,1 +1,35 @@
-<p>xp works!</p>
+<h1>Minha trajetória <span>profissional ;)</span></h1>
+
+
+  <div class="progress-wrapper">
+    <div class="progress-bar-container">
+      <ul>
+        <li class="step "  [ngClass]="stepPosition==1 ? 'active' : ''"   (click)="teste('sesi')">
+          <div class="step-inner"   > SESI </div>
+        </li>
+        <li class="step" [ngClass]="stepPosition==20 ? 'active' : ''"  (click)="teste('gazeta')">
+          <div class="step-inner"> Gazeta </div>
+        </li>
+        <li class="step " [ngClass]="stepPosition==40 ? 'active' : ''"  (click)="teste('tim')">
+          <div class="step-inner"> TIM </div>
+        </li>
+        <li class="step" [ngClass]="stepPosition==60 ? 'active' : ''" (click)="teste('saraiva')">
+          <div class="step-inner"> Saraiva </div>
+        </li>
+
+        <li class="step" [ngClass]="stepPosition==80 ? 'active' : ''" (click)="teste('prefeitura')">
+          <div class="step-inner"> Prefeitura </div>
+        </li>
+        <li class="step" [ngClass]="stepPosition==100 ? 'active' : ''"(click)="teste('atual')">
+          <div class="step-inner"> Atualmente </div>
+        </li>
+      </ul>
+      <div class="line">
+        <div class="line-process" [style.width]="stepPosition+'%'"></div>
+      </div>
+    </div>
+    <app-descricao-xpcomponent
+      [empresa]="empresa"
+    ></app-descricao-xpcomponent>
+  </div>
+
