@@ -24,6 +24,7 @@ import { XpComponent } from './corpo/xp/xp.component';
 import { FaleComigoComponent } from './corpo/fale-comigo/fale-comigo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupFaleComigoComponent } from './services/popup-fale-comigo/popup-fale-comigo.component';
+import { DescricaoXPComponentComponent } from './corpo/xp/descricao-xpcomponent/descricao-xpcomponent.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PopupFaleComigoComponent } from './services/popup-fale-comigo/popup-fal
     ProjetosComponent,
     XpComponent,
     FaleComigoComponent,
-    PopupFaleComigoComponent
+    PopupFaleComigoComponent,
+    DescricaoXPComponentComponent
   ],
   imports: [
     BrowserModule,

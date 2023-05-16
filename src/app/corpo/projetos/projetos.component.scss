@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items:center;
+  min-height:100vh;
+}
+.container-projetos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
+
+  .card-projetos {
+    position: relative;
+    width: 350px;
+    height: 300px;
+    background: transparent;
+    border-radius: 20px;
+
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .content-projetos {
+      position: absolute;
+      width: 100%;
+      padding: 0 30px;
+      text-align: center;
+      top: 250px;
+      height: 40px;
+      overflow: hidden;
+      transition: 0.5s;
+
+      h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #4541b4;
+        margin-bottom:0;
+      }
+
+      p {
+        color: #4541b4;
+        font-size: 0.6em;
+        margin-bottom:0;
+      }
+
+      a {
+        position: relative;
+        top: 2px;
+        display: inline-block;
+        padding: 3px 6px;
+        margin-top:0;
+        margin-bottom:0;
+        background: #4541b4;
+        color: #fff;
+        font-weight: 200;
+        text-decoration: none;
+        border-radius: 8px;
+      }
+    }
+
+    .img-Projetos {
+      position: absolute;
+      width: 300px;
+      height: 220px;
+      background: none;
+      top: 20px;
+      border-radius: 12px;
+      transition: 0.5s;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        background-image:none;
+      }
+    }
+  }
+
+  .card-projetos:hover {
+    height: 400px;
+  }
+}
+.container-projetos .card-projetos:hover .img-Projetos {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+}
+.container-projetos .card-projetos:hover .content-projetos {
+    height:250px;
+    top:100px;
+}

@@ -18,6 +18,7 @@
     align-items:center;
     background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
 
+
 }
 
 section::before{
@@ -39,7 +40,7 @@ section .color:nth-child(1){
     top:-350px;
 }
 ul{
-   margin-top:10em;
+   margin-top:3em;
    position:relative;
    z-index:2;
 }
