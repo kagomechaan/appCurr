@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  border-radius: 20px;
+
+}
+
+form {
+ 
+  justify-content: center;
+  align-items: center;
+}
+
+.containerFale {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 20px;
+  height: 600px;
+  background-color: #122647;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: -10px 15px 50px #000000;
+  border-radius: 20px;
+}
+.containerFale .formBx {
+
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:2;
+}
+.containerFale .formBx form {
+  position: relative;
+  width: 100%;
+  padding: 0 0 0 75px;
+}
+.containerFale .formBx form h2 {
+  align-items:center;
+  justify-content:center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+.containerFale .formBx form .inputBox {
+  position: relative;
+  margin-bottom: 40px;
+}
+.containerFale .formBx form .inputBox:last-child {
+  margin-bottom: 0px;
+}
+.containerFale .formBx form .inputBox input,
+.containerFale .formBx form .inputBox textarea {
+  position: relative;
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: #fff;
+  padding-bottom: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  resize: none;
+}
+.containerFale .formBx form .inputBox textarea {
+  height: 100px;
+}
+.containerFale .formBx form .inputBox input[type="submit"] {
+  background: #fff;
+  padding: 8px 20px;
+  margin-top: -10px;
+  width: 100px;
+  cursor: pointer;
+  background: #ff5064;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.containerFale .formBx form .inputBox input[type="submit"]:focus {
+  background: #1bfaad;
+  color: #111;
+}
+.containerFale .formBx form .inputBox span {
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+  font-weight: 300;
+  display: inline-block;
+  pointer-events: none;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s;
+}
+.containerFale .formBx form .inputBox input:focus ~ span,
+.containerFale .formBx form .inputBox textarea:focus ~ span,
+.containerFale .formBx form .inputBox input:valid ~ span,
+.containerFale .formBx form .inputBox textarea:valid ~ span{
+  transform: translateY(-24px);
+  color: #1bfaad;
+  font-size: 14px;
+}
+.containerFale .formBx form .inputBox input:focus ,
+.containerFale .formBx form .inputBox textarea:focus ,
+.containerFale .formBx form .inputBox input:valid ,
+.containerFale .formBx form .inputBox textarea:valid  {
+    border-bottom-color:#fff;
+    }
+.containerFale .imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.containerFale .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff5064;
+  transform-origin:bottom;
+  transform:skewX(-25deg) translateX(10%);
+
+  
+}
+.containerFale .validation-error {
+  transform: translateY(-24px);
+  font-size: 14px;
+}
+.validation-error {
+  color: #ff5064;
+  border-left: 3px solid #ff5064;
+  position:relative;
+  text-size-adjust:auto;
+  font-display:auto;
+  font-size-adjust:inherit;
+  padding-left:.2em;
+}
+
+@media(max-width:991px) {
+    .containerFale .formBx {
+      width: 100%;
+      padding: 0 50px;
+    }
+
+    .containerFale .imgBx {
+      display: none;
+    }
+
+    .containerFale .formBx form {
+      width: 100%;
+      max-width: 500px;
+      padding: 0;
+    }
+  }
+
+.loader {
+  text-size-adjust:auto;
+  display:flex;
+  margin-left:60em;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color:transparent;
+  margin-top:08em;
+}
+.loader h1 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 10em;
+  color: rgba(255,255,255,.1);
+  background-image: url("../../../assets/agua.png");
+  background-repeat: repeat-x;
+  -webkit-background-clip: text;
+  animation: animate 15s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position:left 0px top 80px;
+
+    }
+    40% {
+      background-position: left 800px top -50px;
+    }
+    80% {
+      background-position: left 1800px top -50px;
+    }
+    100% {
+      background-position: left 2400px top 80px;
+    }
+}
+
+  
+
+  

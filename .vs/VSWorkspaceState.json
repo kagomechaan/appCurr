@@ -4,11 +4,8 @@
     "\\.angular",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\corpo",
-    "\\src\\app\\corpo\\redes-sociais",
-    "\\src\\assets",
-    "\\src\\assets\\certificados"
+    "\\src\\app\\services",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\assets\\certificados\\sebraeNegociacao .jpg",
   "PreviewInSolutionExplorer": false
 }

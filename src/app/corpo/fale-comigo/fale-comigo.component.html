@@ -1,1 +1,43 @@
-<p>fale-comigo works!</p>
+<div *ngIf="verificacao === true" class="loader">
+
+  <h1> Loading </h1>
+
+</div>
+
+
+<div class="containerFale " *ngIf="verificacao === false">
+  <div class="formBx">
+    <form (ngSubmit)="submit()" [formGroup]="momentForm">
+      <h2>Contact me ;)</h2>
+
+      <div class="inputBox">
+        <input type="text" formControlName="nome" required="required">
+        <span>Nome completo: </span>
+      </div>
+      <div *ngIf="nome?.status === 'INVALID' && !nome.pristine" class="validation-error">
+        <p>Favor preencher o campo com seu nome completo</p>
+      </div>
+
+      <div class="inputBox">
+        <input type="text" formControlName="email" required="required">
+        <span>Endereço de email: </span>
+      </div>
+      <div *ngIf="email?.status === 'INVALID' && !email.pristine" class="validation-error">
+        <p>Favor preencher o campo com seu email corretamente.</p>
+      </div>
+
+      <div class="inputBox">
+        <textarea formControlName="text" required="required"></textarea>
+        <span>Digite aqui sua mensagem: </span>
+      </div>
+
+      <div class="inputBox">
+        <input type="submit" value="Send" name="submit">
+      </div>
+
+    </form>
+  </div>
+  <div class="imgBx">
+
+  </div>
+</div>

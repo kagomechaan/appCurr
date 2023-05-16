@@ -1,35 +1,55 @@
-
-<div class="carrossel" >
-  <swiper [slidesPerView]="1"
-          [spaceBetween]="10"
-          [navigation]="true"
-          [pagination]="{ clickable: true }">
+<section>
+  <swiper [effect]="'coverflow'"
+          [grabCursor]="true"
+          [centeredSlides]="true"
+          [slidesPerView]="'auto'"
+          [coverflowEffect]="{
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2,
+      slideShadows: true
+    }"
+          [pagination]="true"
+          class="mySwiper">
     <ng-template swiperSlide>
-      <img src="../assets/certificados/angular4.jpg"  />
+      <img src="../assets/certificados/Programador _istemas- SENAC-Frente.jpeg" class="quote" />
     </ng-template>
     <ng-template swiperSlide>
-      <img src="../assets/certificados/aprendizagemCognitiva01.jpg" />
+      <img src="../assets/certificados/Programador_Sistemas- SENAC-Verso.jpeg" class="quote" />
     </ng-template>
     <ng-template swiperSlide>
-      <img src="../assets/certificados/aprendizagemCognitiva02.jpg" />
+      <img src="../assets/certificados/Graduação_Ciencias_Contábeis-Frente.jpeg" class="quote" />
     </ng-template>
     <ng-template swiperSlide>
-      <img src="../assets/certificados/auditoria01.jpg" />
+      <img src="../assets/certificados/Graduação_Ciencias_Contábeis-Verso.jpeg" class="quote" />
     </ng-template>
     <ng-template swiperSlide>
-      <img src="../assets/certificados/auditoria02.jpg" />
+      <img src="../assets/certificados/angular4.jpg" class="quote" />
     </ng-template>
     <ng-template swiperSlide>
-      <img src="../assets/certificados/contabilidadeBasica01.jpg" />
+      <img src="../assets/certificados/aprendizagemCognitiva01.jpg" class="quote" />
     </ng-template>
     <ng-template swiperSlide>
-      <img src="../assets/certificados/contabilidadeBasica02.jpg" />
+      <img src="../assets/certificados/aprendizagemCognitiva02.jpg" class="quote" />
     </ng-template>
     <ng-template swiperSlide>
-      <img src="../assets/certificados/hackathonProdest.jpg" />
+      <img src="../assets/certificados/auditoria01.jpg" class="quote" />
     </ng-template>
     <ng-template swiperSlide>
-      <img src="../assets/certificados/sebraeNegociacao .jpg" />
+      <img src="../assets/certificados/auditoria02.jpg" class="quote" />
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="../assets/certificados/contabilidadeBasica01.jpg" class="quote" />
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="../assets/certificados/contabilidadeBasica02.jpg" class="quote" />
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="../assets/certificados/hackathonProdest.jpg" class="quote" />
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="../assets/certificados/sebraeNegociacao .jpg" class="quote" />
     </ng-template>
   </swiper>
-</div>
+</section>
