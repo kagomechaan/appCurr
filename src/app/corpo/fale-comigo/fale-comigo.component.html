@@ -1,36 +1,40 @@
-<div class="containerFale ">
+<div *ngIf="verificacao === true" class="loader">
+
+  <h1> Loading </h1>
+
+</div>
+
+
+<div class="containerFale " *ngIf="verificacao === false">
   <div class="formBx">
-    <form action="https://api.staticforms.xyz/submit" method="post">
-      <input type="hidden" name="accessKey" value="99318869-59e5-4117-a6a7-56adb3fd4b2b" />
-      <input type="hidden" name="redirectTo" value="http://localhost:4200/falecomigo/susses" />
-        <h2>Contact me ;)</h2>
-        <div class="inputBox">
-          <input type="text" name="name" required="required">
-          <span>Nome completo: </span>
-        </div>
+    <form (ngSubmit)="submit()" [formGroup]="momentForm">
+      <h2>Contact me ;)</h2>
 
-        <div class="inputBox">
-          <input type="email" name="email" required="required" >
-          <span>Endereço de email: </span>
-        </div>
+      <div class="inputBox">
+        <input type="text" formControlName="nome" required="required">
+        <span>Nome completo: </span>
+      </div>
+      <div *ngIf="nome?.status === 'INVALID' && !nome.pristine" class="validation-error">
+        <p>Favor preencher o campo com seu nome completo</p>
+      </div>
 
-        <div class="inputBox">
-          <textarea required="required" name="message"></textarea>
-          <span>Digite aqui sua mensagem: </span>
-        </div>
+      <div class="inputBox">
+        <input type="text" formControlName="email" required="required">
+        <span>Endereço de email: </span>
+      </div>
+      <div *ngIf="email?.status === 'INVALID' && !email.pristine" class="validation-error">
+        <p>Favor preencher o campo com seu email corretamente.</p>
+      </div>
 
-        <div class="inputBox">
-          <input type="submit" value="Send" name="" (click)="toggle()"id="popup">
-        </div>
-        <div [class]=" pupopIsVisible ? 'containerPopup' : ''">
-        <div class="popup " [class]="pupopIsVisible ? 'openpopup' : ''" >
-          <img src="../assets/popupOK.png" />
-          <h3>Obrigada!</h3>
-          <p>Sua mensagem foi enviada com sucesso, assim que possível retornarei o contato.</p>
-          <button type="button" (click)="toggle()">Ok</button>
-        </div>
-        </div>
-       
+      <div class="inputBox">
+        <textarea formControlName="text" required="required"></textarea>
+        <span>Digite aqui sua mensagem: </span>
+      </div>
+
+      <div class="inputBox">
+        <input type="submit" value="Send" name="submit">
+      </div>
+
     </form>
   </div>
   <div class="imgBx">

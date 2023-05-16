@@ -13,14 +13,6 @@ export class MenuComponent {
   faGlasses = faGlasses;
   faHouse = faHouse;
   list = document.querySelectorAll('.list');
-
-
-  
- 
- 
-
-
-
 }
 
 

@@ -4,10 +4,8 @@
     "\\.angular",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\corpo",
-    "\\src\\app\\corpo\\fale-comigo",
+    "\\src\\app\\services",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\corpo\\corpo.component.html",
   "PreviewInSolutionExplorer": false
 }
